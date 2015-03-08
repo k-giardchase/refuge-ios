@@ -64,7 +64,11 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <IDERemoteRunnable
+         RemotePath = "/Today-View"
+         BundleIdentifier = "/Today-View">
+      </IDERemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CED0CB4F1A82A6D300F7F3D8"
@@ -72,7 +76,7 @@
             BlueprintName = "refuge-ios"
             ReferencedContainer = "container:refuge-ios.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
