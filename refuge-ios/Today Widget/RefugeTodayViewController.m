@@ -6,24 +6,27 @@
 //  Copyright (c) 2015 Refuge Restrooms. All rights reserved.
 //
 
-#import "TodayViewController.h"
+#import "RefugeTodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 
-@interface TodayViewController () <NCWidgetProviding>
+static CGFloat const kMarginSize = 10.0;
+
+@interface RefugeTodayViewController () <NCWidgetProviding>
 
 @end
 
-@implementation TodayViewController
+@implementation RefugeTodayViewController
 
-- (void)viewDidLoad {
+#pragma mark - View life-cycle
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - Protocol conformance
+
+#pragma mark NCWidget Providing
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
     // Perform any setup necessary in order to update the view.
@@ -33,6 +36,12 @@
     // If there's an update, use NCUpdateResultNewData
 
     completionHandler(NCUpdateResultNewData);
+}
+
+- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets
+{
+    defaultMarginInsets.bottom = kMarginSize;
+    return defaultMarginInsets;
 }
 
 @end

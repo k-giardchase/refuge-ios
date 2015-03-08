@@ -43,7 +43,7 @@
 		DC6284651A9978E60038E604 /* refuge-icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6284641A9978E60038E604 /* refuge-icon-facebook.png */; };
 		DC62846D1A9984CA0038E604 /* refuge-icon-twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = DC62846C1A9984CA0038E604 /* refuge-icon-twitter.png */; };
 		DC642F9A1AAD085C00DB6085 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC642F991AAD085C00DB6085 /* NotificationCenter.framework */; };
-		DC642FA01AAD085C00DB6085 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC642F9F1AAD085C00DB6085 /* TodayViewController.m */; };
+		DC642FA01AAD085C00DB6085 /* RefugeTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC642F9F1AAD085C00DB6085 /* RefugeTodayViewController.m */; };
 		DC642FA21AAD085C00DB6085 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC642FA11AAD085C00DB6085 /* MainInterface.storyboard */; };
 		DC642FA51AAD085C00DB6085 /* Today Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DC642F981AAD085C00DB6085 /* Today Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DC8354231AABAED3009BEA58 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8354221AABAED3009BEA58 /* Fabric.framework */; };
@@ -200,8 +200,8 @@
 		DC642F981AAD085C00DB6085 /* Today Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Today Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC642F991AAD085C00DB6085 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		DC642F9D1AAD085C00DB6085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC642F9E1AAD085C00DB6085 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		DC642F9F1AAD085C00DB6085 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		DC642F9E1AAD085C00DB6085 /* RefugeTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefugeTodayViewController.h; sourceTree = "<group>"; };
+		DC642F9F1AAD085C00DB6085 /* RefugeTodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefugeTodayViewController.m; sourceTree = "<group>"; };
 		DC642FA11AAD085C00DB6085 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		DC8354221AABAED3009BEA58 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		DC8F394B1A97FC8000A90B13 /* RefugeRestroomsSeed.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = RefugeRestroomsSeed.sqlite; path = ../../RefugeRestroomsSeed.sqlite; sourceTree = "<group>"; };
@@ -432,8 +432,8 @@
 		DC642F9B1AAD085C00DB6085 /* Today Widget */ = {
 			isa = PBXGroup;
 			children = (
-				DC642F9E1AAD085C00DB6085 /* TodayViewController.h */,
-				DC642F9F1AAD085C00DB6085 /* TodayViewController.m */,
+				DC642F9E1AAD085C00DB6085 /* RefugeTodayViewController.h */,
+				DC642F9F1AAD085C00DB6085 /* RefugeTodayViewController.m */,
 				DC642FA11AAD085C00DB6085 /* MainInterface.storyboard */,
 				DC642F9C1AAD085C00DB6085 /* Supporting Files */,
 			);
@@ -911,7 +911,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC642FA01AAD085C00DB6085 /* TodayViewController.m in Sources */,
+				DC642FA01AAD085C00DB6085 /* RefugeTodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1124,7 +1124,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Today Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1138,7 +1138,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Today Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
