@@ -42,6 +42,10 @@
 		DC6284631A996D000038E604 /* RefugeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6284611A996D000038E604 /* RefugeInfoViewController.m */; };
 		DC6284651A9978E60038E604 /* refuge-icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6284641A9978E60038E604 /* refuge-icon-facebook.png */; };
 		DC62846D1A9984CA0038E604 /* refuge-icon-twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = DC62846C1A9984CA0038E604 /* refuge-icon-twitter.png */; };
+		DC642F9A1AAD085C00DB6085 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC642F991AAD085C00DB6085 /* NotificationCenter.framework */; };
+		DC642FA01AAD085C00DB6085 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC642F9F1AAD085C00DB6085 /* TodayViewController.m */; };
+		DC642FA21AAD085C00DB6085 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC642FA11AAD085C00DB6085 /* MainInterface.storyboard */; };
+		DC642FA51AAD085C00DB6085 /* Today Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DC642F981AAD085C00DB6085 /* Today Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DC8354231AABAED3009BEA58 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8354221AABAED3009BEA58 /* Fabric.framework */; };
 		DC8F394C1A97FC8100A90B13 /* RefugeRestroomsSeed.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DC8F394B1A97FC8000A90B13 /* RefugeRestroomsSeed.sqlite */; };
 		DC8F39581A980C5F00A90B13 /* iRate+Refuge.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8F394F1A980C5F00A90B13 /* iRate+Refuge.m */; };
@@ -123,7 +127,28 @@
 			remoteGlobalIDString = CED0CB4F1A82A6D300F7F3D8;
 			remoteInfo = "refuge-ios";
 		};
+		DC642FA31AAD085C00DB6085 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CED0CB481A82A6D300F7F3D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC642F971AAD085C00DB6085;
+			remoteInfo = "Today Widget";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC642FA91AAD085D00DB6085 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DC642FA51AAD085C00DB6085 /* Today Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		959014171F527C71C6D9EB85 /* libPods-refuge-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-refuge-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +197,12 @@
 		DC6284611A996D000038E604 /* RefugeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefugeInfoViewController.m; sourceTree = "<group>"; };
 		DC6284641A9978E60038E604 /* refuge-icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refuge-icon-facebook.png"; sourceTree = "<group>"; };
 		DC62846C1A9984CA0038E604 /* refuge-icon-twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refuge-icon-twitter.png"; sourceTree = "<group>"; };
+		DC642F981AAD085C00DB6085 /* Today Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Today Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC642F991AAD085C00DB6085 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		DC642F9D1AAD085C00DB6085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC642F9E1AAD085C00DB6085 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		DC642F9F1AAD085C00DB6085 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		DC642FA11AAD085C00DB6085 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		DC8354221AABAED3009BEA58 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		DC8F394B1A97FC8000A90B13 /* RefugeRestroomsSeed.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = RefugeRestroomsSeed.sqlite; path = ../../RefugeRestroomsSeed.sqlite; sourceTree = "<group>"; };
 		DC8F394E1A980C5F00A90B13 /* iRate+Refuge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iRate+Refuge.h"; sourceTree = "<group>"; };
@@ -263,6 +294,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC642F951AAD085C00DB6085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC642F9A1AAD085C00DB6085 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -274,6 +313,7 @@
 				DC8354221AABAED3009BEA58 /* Fabric.framework */,
 				CEA2401E1A86F9410083510F /* MapKit.framework */,
 				959014171F527C71C6D9EB85 /* libPods-refuge-ios.a */,
+				DC642F991AAD085C00DB6085 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -315,6 +355,7 @@
 			children = (
 				CED0CB521A82A6D300F7F3D8 /* refuge-ios */,
 				CED0CB6F1A82A6D500F7F3D8 /* refuge-iosTests */,
+				DC642F9B1AAD085C00DB6085 /* Today Widget */,
 				CED0CB511A82A6D300F7F3D8 /* Products */,
 				EA08CCE57F3C7FE32EA6AC15 /* Pods */,
 				68FB1F0E5CB3E3A5E8E048A1 /* Frameworks */,
@@ -326,6 +367,7 @@
 			children = (
 				CED0CB501A82A6D300F7F3D8 /* refuge-ios.app */,
 				CED0CB6C1A82A6D500F7F3D8 /* refuge-iosTests.xctest */,
+				DC642F981AAD085C00DB6085 /* Today Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,6 +425,25 @@
 			isa = PBXGroup;
 			children = (
 				CED0CB711A82A6D500F7F3D8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC642F9B1AAD085C00DB6085 /* Today Widget */ = {
+			isa = PBXGroup;
+			children = (
+				DC642F9E1AAD085C00DB6085 /* TodayViewController.h */,
+				DC642F9F1AAD085C00DB6085 /* TodayViewController.m */,
+				DC642FA11AAD085C00DB6085 /* MainInterface.storyboard */,
+				DC642F9C1AAD085C00DB6085 /* Supporting Files */,
+			);
+			path = "Today Widget";
+			sourceTree = "<group>";
+		};
+		DC642F9C1AAD085C00DB6085 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC642F9D1AAD085C00DB6085 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -568,10 +629,12 @@
 				CED0CB4E1A82A6D300F7F3D8 /* Resources */,
 				1D69CA609FF701E4D138D1E9 /* Copy Pods Resources */,
 				DCE6BB8A1A96CCCB006B9B8A /* ShellScript */,
+				DC642FA91AAD085D00DB6085 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DC642FA41AAD085C00DB6085 /* PBXTargetDependency */,
 			);
 			name = "refuge-ios";
 			productName = "refuge-ios";
@@ -596,6 +659,23 @@
 			productReference = CED0CB6C1A82A6D500F7F3D8 /* refuge-iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DC642F971AAD085C00DB6085 /* Today Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC642FA81AAD085D00DB6085 /* Build configuration list for PBXNativeTarget "Today Widget" */;
+			buildPhases = (
+				DC642F941AAD085C00DB6085 /* Sources */,
+				DC642F951AAD085C00DB6085 /* Frameworks */,
+				DC642F961AAD085C00DB6085 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Today Widget";
+			productName = "Today Widget";
+			productReference = DC642F981AAD085C00DB6085 /* Today Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -614,6 +694,10 @@
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = CED0CB4F1A82A6D300F7F3D8;
 					};
+					DC642F971AAD085C00DB6085 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = G58XPAD97M;
+					};
 				};
 			};
 			buildConfigurationList = CED0CB4B1A82A6D300F7F3D8 /* Build configuration list for PBXProject "refuge-ios" */;
@@ -631,6 +715,7 @@
 			targets = (
 				CED0CB4F1A82A6D300F7F3D8 /* refuge-ios */,
 				CED0CB6B1A82A6D500F7F3D8 /* refuge-iosTests */,
+				DC642F971AAD085C00DB6085 /* Today Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -679,6 +764,14 @@
 				CEA2401D1A86F6360083510F /* LaunchScreen.xib in Resources */,
 				DC8F39F11A9810F800A90B13 /* RefugeOnboardPage3.xib in Resources */,
 				DC8F39D21A9810B300A90B13 /* refuge-map-pin.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC642F961AAD085C00DB6085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC642FA21AAD085C00DB6085 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +907,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC642F941AAD085C00DB6085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC642FA01AAD085C00DB6085 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -821,6 +922,11 @@
 			isa = PBXTargetDependency;
 			target = CED0CB4F1A82A6D300F7F3D8 /* refuge-ios */;
 			targetProxy = CED0CB6D1A82A6D500F7F3D8 /* PBXContainerItemProxy */;
+		};
+		DC642FA41AAD085C00DB6085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC642F971AAD085C00DB6085 /* Today Widget */;
+			targetProxy = DC642FA31AAD085C00DB6085 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1007,6 +1113,38 @@
 			};
 			name = Release;
 		};
+		DC642FA61AAD085D00DB6085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D67BB335B17D0B597EE2123D /* Pods-refuge-ios.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Today Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DC642FA71AAD085D00DB6085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D938493C66A1C4E8E58FEA67 /* Pods-refuge-ios.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Today Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1036,6 +1174,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DC642FA81AAD085D00DB6085 /* Build configuration list for PBXNativeTarget "Today Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC642FA61AAD085D00DB6085 /* Debug */,
+				DC642FA71AAD085D00DB6085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
