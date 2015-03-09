@@ -11,11 +11,12 @@
 #import "RefugeRestroom.h"
 
 static CGFloat const kMarginSize = 10.0;
+static NSString * const kClosestRestroomsTableCellReuseIdentifier = @"ClosestRestroomsTableCellReuseIdentifier";
 
-@interface RefugeTodayViewController () <NCWidgetProviding>
+@interface RefugeTodayViewController () <NCWidgetProviding, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) NSMutableArray *closestRestrooms;
-@property (weak, nonatomic) IBOutlet UILabel *restroomNameLabel;
+@property (weak, nonatomic) IBOutlet UITableView *restroomsTableView;
 
 @end
 
@@ -26,6 +27,9 @@ static CGFloat const kMarginSize = 10.0;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.restroomsTableView.dataSource = self;
+    self.restroomsTableView.delegate = self;
     
     [self updateInterface];
 }
@@ -44,8 +48,6 @@ static CGFloat const kMarginSize = 10.0;
     
     
     // If there's an update, use NCUpdateResultNewData
-    [self updateInterface];
-
     completionHandler(NCUpdateResultNewData);
 }
 
@@ -55,11 +57,39 @@ static CGFloat const kMarginSize = 10.0;
     return defaultMarginInsets;
 }
 
+#pragma mark UITableViewDataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.restroomsTableView dequeueReusableCellWithIdentifier:kClosestRestroomsTableCellReuseIdentifier];
+    
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kClosestRestroomsTableCellReuseIdentifier];
+    }
+    
+    RefugeRestroom *restroom = [self.closestRestrooms objectAtIndex:indexPath.row];
+    cell.textLabel.text = restroom.name;
+    
+    return cell;
+
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.closestRestrooms count];
+}
+
+#pragma mark UITableViewDelegate
+
 #pragma mark - Helpers
 
 - (void)updateInterface
 {
-    self.restroomNameLabel.text = @"Test";
+    [self fetchClosestRestrooms];
+    
+    [self.restroomsTableView reloadData];
+    self.preferredContentSize = self.restroomsTableView.contentSize;
 }
 
 - (void)fetchClosestRestrooms

@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Refuge Today View Controller-->
@@ -18,19 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restroom Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9L-aL-OlN">
-                                <rect key="frame" x="16" y="8" width="240" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mYx-wb-dnk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="ucl-ln-d4a"/>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="Dos-zM-5pS"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="z9L-aL-OlN" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="6q7-oe-3ke"/>
-                            <constraint firstItem="z9L-aL-OlN" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="GxG-9W-94W"/>
-                            <constraint firstAttribute="centerY" secondItem="z9L-aL-OlN" secondAttribute="centerY" id="WDO-Ir-aXj"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="z9L-aL-OlN" secondAttribute="bottom" constant="8" id="XcY-xM-EzC"/>
-                            <constraint firstItem="z9L-aL-OlN" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" multiplier="3:4" id="xNQ-bP-MCB"/>
+                            <constraint firstAttribute="centerX" secondItem="mYx-wb-dnk" secondAttribute="centerX" id="2Zo-pl-ABF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mYx-wb-dnk" secondAttribute="trailing" constant="-16" id="D1g-um-Awr"/>
+                            <constraint firstItem="mYx-wb-dnk" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="-16" id="VCZ-g5-4At"/>
+                            <constraint firstItem="mYx-wb-dnk" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="lWb-as-OXQ"/>
+                            <constraint firstAttribute="centerY" secondItem="mYx-wb-dnk" secondAttribute="centerY" id="toX-ju-j2N"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="mYx-wb-dnk" secondAttribute="bottom" id="zbb-my-WLz"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -40,7 +42,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="37"/>
                     <connections>
-                        <outlet property="restroomNameLabel" destination="z9L-aL-OlN" id="lPy-rx-ktK"/>
+                        <outlet property="restroomsTableView" destination="mYx-wb-dnk" id="g6w-zW-zXA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
